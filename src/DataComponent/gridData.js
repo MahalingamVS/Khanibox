@@ -66,8 +66,8 @@ export class HomeGrid extends Component {
             .then(result => {
 
                 let tempData = [];
-                result.forEach(element => {
-                    tempData.push({ "id": element.id, "name": element.title, "body": element.body })
+                result.forEach((element) => {
+                    tempData.push({ "id": element.id, "name": "User " +element.id, "body": element.title })
                 });
                 this.setState({
                     rowData: tempData
